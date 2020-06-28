@@ -49,25 +49,18 @@ function playRound() {
     }
 
     if (computerScore >= 5) {
-        resultText = `The computer won with ${computerScore} points to ${playerScore}. Try again!`;
+        resultText = `The computer won with ${computerScore} points to ${playerScore}. 
+        Try again!`;
         computerScore = 0;
         playerScore = 0;
     } else if (playerScore >= 5) {
-        resultText = `You won with ${computerScore} points to ${playerScore}! Try again if you dare`;
+        resultText = `You won with ${playerScore} points to ${computerScore}! 
+        Try again if you dare`;
         computerScore = 0;
         playerScore = 0;
     }
 
-    if (playerScore == 1) {
-        playerScoreDisplay.textContent = `${playerScore} point`;
-    } else {
-        playerScoreDisplay.textContent = `${playerScore} points`;
-    }
-
-    if (computerScore == 1) {
-        computerScoreDisplay.textContent = `${computerScore} point`;
-    } else {
-        computerScoreDisplay.textContent = `${computerScore} points`;
-    }
+    playerScoreDisplay.textContent = playerScore;
+    computerScoreDisplay.textContent = computerScore;
     resultDisplay.textContent = resultText;
 }

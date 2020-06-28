@@ -1,0 +1,31 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+}
+
+.container {
+    grid-column: 2 / 3;
+    display: grid;
+    grid-template-rows: 100px 2fr 1fr 2fr 2fr auto;
+}
+
+.scores {
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+}
+
+.selectionDisplay {
+    display: flex;
+    justify-content: space-between;
+}
+
+#computerHand {
+    transform: scaleX(-1);
+}

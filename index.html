@@ -4,28 +4,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <title>Rock Paper Scissors</title>
+    <script src="https://kit.fontawesome.com/cc8516d608.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
-    <div class="scores">
-        <div class="playerScoreContainer">
-            <h1 class="scoreHeader" id="playerScoreHeader">Your Score:</h1>
-            <h2 class="score" id="playerScore">0 points</h2>
+    <div class="container">
+        <div class="title">
+            <h1>Rock, Paper Scissors</h1>
         </div>
-        <div class="computerScoreContainer">
-            <h1 class="scoreHeader" id="computerScoreHeader">Computer's score:</h1>
-            <h2 class="score" id="computerScore">0 points</h2>
+        <div class="scores">
+            <div class="scoreContainer">
+                <h1 class="scoreHeader" id="playerScoreHeader">You</h1>
+                <h2 class="score" id="playerScore">0</h2>
+            </div>
+            <div class="scoreContainer">
+                <h1 class="scoreHeader" id="computerScoreHeader">Computer</h1>
+                <h2 class="score" id="computerScore">0</h2>
+            </div>
         </div>
-    </div>
-    <div class="playButtons">
-        <button class="playBtn" id="rock">Rock</button>
-        <button class="playBtn" id="paper">Paper</button>
-        <button class="playBtn" id="scissors">Scissors</button>
-    </div>
+        <div class="selectionDisplay">
+            <i class="far fa-hand-rock fa-rotate-90" id="player-hand"></i>
+            <i class="far fa-hand-rock fa-rotate-90" id="computer-hand"></i>
+        </div>
+        <div class="playButtons">
+            <button class="playBtn" id="rock"><i class="far fa-hand-rock fa-rotate-90"></i></button>
+            <button class="playBtn" id="paper"><i class="far fa-hand-paper fa-rotate-90"></i></button>
+            <button class="playBtn" id="scissors"><i class="far fa-hand-scissors fa-flip-horizontal"></i></button>
+        </div>
 
-    <div class="results">
-        <h2 id="resultDisplay">Choose your weapon</h2>
+        <div class="results">
+            <h1 id="resultDisplay">Choose your weapon</h1>
+        </div>
     </div>
 
     <script src="script.js"></script>
