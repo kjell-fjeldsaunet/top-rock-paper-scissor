@@ -63,4 +63,25 @@ function playRound() {
     playerScoreDisplay.textContent = playerScore;
     computerScoreDisplay.textContent = computerScore;
     resultDisplay.textContent = resultText;
+
+    const playerHand = document.querySelector('#playerHand');//get illustrated player hand
+    playerHand.classList.remove('fa-flip-horizontal', 'fa-rotate-90', 'fa-hand-rock', 'fa-hand-paper', 'fa-hand-scissors')//remove current player hand icon
+    setHand(playerInput).forEach((cls) => {//add each class for icon
+        playerHand.classList.add(cls);
+    })
+    //Repeat for computer
+    const computerHand = document.querySelector('#computerHand');
+    computerHand.classList.remove('fa-flip-horizontal', 'fa-rotate-90', 'fa-hand-rock', 'fa-hand-paper', 'fa-hand-scissors')
+    setHand(computerInput).forEach((cls) => {
+        computerHand.classList.add(cls);
+    })
+}
+
+function setHand(playedHand) {
+    let currentHand = playedHand.toLowerCase();
+    if (currentHand == 'scissors') {
+        return ['fa-flip-horizontal', 'fa-hand-scissors'];
+    } else {
+        return [`fa-rotate-90`, `fa-hand-${currentHand}`];
+    }
 }
